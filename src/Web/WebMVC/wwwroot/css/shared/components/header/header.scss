@@ -1,0 +1,29 @@
+@import '../../../variables';
+
+.esh-header {
+    $header-height: 4rem;
+
+    background-color: $color-brand;
+    height: $header-height;
+
+    &-back {
+        color: rgba($color-foreground-brighter, .5);
+        line-height: $header-height;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: color $animation-speed-default;
+
+        &:hover {
+            color: $color-foreground-brighter;
+            transition: color $animation-speed-default;
+        }
+    }
+}
+
+
+
+.cstm_header {
+    padding: 10px;
+    background: #eae5e5;
+    box-shadow: 1px 2px 4px #b7b2b2;
+}

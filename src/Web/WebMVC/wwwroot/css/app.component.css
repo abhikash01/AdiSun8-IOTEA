@@ -1,0 +1,23 @@
+﻿.esh-app-footer {
+  background-color: #000000;
+  border-top: 1px solid #EEEEEE;
+  margin-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  padding-top: 2.5rem;
+  width: 100%;
+}
+
+.esh-app-footer-brand {
+  height: 50px;
+  width: 230px;
+}
+
+.esh-app-header {
+  margin: 15px;
+}
+
+.cstm_header {
+    padding: 10px;
+    background: #eae5e5;
+    box-shadow: 1px 2px 4px #b7b2b2;
+}

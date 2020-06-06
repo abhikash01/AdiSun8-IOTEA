@@ -1,0 +1,56 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using WebMVC.Models
+@using WebMVC.Services
+
+@if (User.Identity.IsAuthenticated)
+{
+    <section class="col-lg-4 col-md-5 col-xs-12">
+        <div class="esh-identity">
+            <form asp-area="" asp-controller="Account" asp-action="SignOut" method="post" id="logoutForm" class="navbar-right">
+                <section class="esh-identity-section">
+
+                    <div class="esh-identity-name"><a asp-area="" asp-controller="User" asp-action="ManageProfile">Hello, @User.FindFirst(x => x.Type == "First Name").Value</a></div>
+                    <img class="esh-identity-image" src="~/images/arrow-down.png">
+                </section>
+
+                <section class="esh-identity-drop">
+
+                    <a class="esh-identity-item"
+                       asp-controller="User"
+                       asp-action="ChangePassword">
+
+                        <div class="esh-identity-name esh-identity-name--upper">Change Password</div>
+                        <img class="esh-identity-image" src="~/images/my_orders.png">
+                    </a>
+
+                    <a class="esh-identity-item"
+                       href="javascript:document.getElementById('logoutForm').submit()">
+
+                        <div class="esh-identity-name esh-identity-name--upper">Log Out</div>
+                        <img class="esh-identity-image" src="~/images/logout.png">
+                    </a>
+                </section>
+            </form>
+        </div>
+    </section>
+}
+else
+{
+    <section class="col-lg-4 col-md-5 col-xs-12">
+        <div class="esh-identity">
+            <section class="esh-identity-section">
+                <div class="esh-identity-item">
+
+                    <a asp-area="" asp-controller="Account" asp-action="SignIn" class="esh-identity-name esh-identity-name--upper">
+                        Login
+                    </a>
+                   
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <section class="col-lg-1 col-xs-12">
+    </section>
+}
+
